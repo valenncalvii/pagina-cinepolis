@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./images/logo.jpeg" type="image/x-icon">
+    <title>Cinepolis</title>
+</head>
+<body>
+  <header>
+    
+    <nav class="navbar">
+      <img src="./images/cinepolis.png" alt="cineapolis-logo">
+      <ul>
+        <li class="nav-item"><a href="#">Inicio</a></li>
+        <li class="nav-item"><a href="#">Contacto</a></li>
+    </ul>
+        <input class="searchBar" type="search" id="busqueda" placeholder="Search movie🔍" autocomplete="off">  
+    </nav>
+</header>
+
+    <main>
+
+      <section class="catalogo-box">
+        <h3>¡Conocé el contenido destacado!</h3>
+        <article class="catalogo">
+            <img src="./images/open.jpeg" alt="Oppenheimer">
+            <img src="./images/avengers.jpeg" alt="avengers endgame">
+            <img src="./images/john.jpeg" alt="john wick 4">
+            <img src="./images/barbie.jpeg" alt="barbie">
+        </article>
+    </section>
+
+      <div class="populares">
+        <div class="contenedor-favoriteMovies" id="contenedor-favoriteMovies">
+        </div>
+        <div class="buttons">
+          <div class="buttonsPosition">
+            <button class="btnAnterior" id="btnAnterior">◀ Anterior</button>
+            <button class="btnSiguiente" id="btnSiguiente">Siguiente ▶</button>
+          </div>
+        </div>
+        </div>
+    </main>
+
+    <footer class="foot">
+      <a>Todos los derechos reservados CinePolis Copyright ©1971-2023</a>
+    </footer>
+
+    <script src="./main.js"></script>
+</body>
+</html>

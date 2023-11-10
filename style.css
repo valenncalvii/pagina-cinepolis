@@ -1,0 +1,481 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*ESTILOS PARA LA NAVBAR*/
+header{
+  position: sticky; /*PROPIEDAD PARA QUE LA NAVBAR BAJE AL HACER SCROLL*/
+  top: 0;
+  z-index: 1;
+}
+
+.navbar {
+  background-color: rgb(97, 128, 231);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  gap: 5rem;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.navbar li {
+  margin: 0 10px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(97, 128, 231);
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.dropdown-content a:hover {
+  background-color: rgb(51, 51, 133);
+}
+
+.searchBar{
+   height: 2.2rem;
+   width: 15rem;
+   border-radius: 10px;
+   -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+   -ms-border-radius: 10px;
+   -o-border-radius: 10px;
+   border: none;
+   padding: 10px;
+}
+.searchBar:focus-within{
+  border: solid 1px #aaa;
+  box-shadow: 0px 2px 5px rgb(173, 157, 157);
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(to right bottom,rgb(153, 44, 196),rgb(6, 205, 255));
+}
+
+/*ESTILOS PARA LA PELICULA*/
+.populares{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.contenedor-favoriteMovies {
+	width: 90%;
+	max-width: 1000px;
+	margin: 40px auto 100px auto;
+
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 40px;
+}
+
+.contenedor-favoriteMovies .pelicula {
+	text-align: start;
+}
+
+.contenedor-favoriteMovies .pelicula .titulo{
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.contenedor-favoriteMovies .pelicula .poster {
+	width: 100%;
+	margin-bottom: 10px;
+	border-radius: 15px;
+}
+
+.pelicula{
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.295);
+
+}
+
+
+.pelicula:hover{
+  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+}
+
+.titulo{
+  color: rgb(255, 255, 255);
+}
+
+/*ESTILO DE LOS BOTONES*/
+.buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  height: 4rem;
+  position: sticky;
+  bottom: 0;
+
+}
+
+#btnAnterior{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 2rem;
+  border: none;
+  border-radius: 1rem;
+  background-color: white;
+  color: rgb(76, 131, 251);
+  cursor: pointer;
+  transition: transform 1s;
+  -webkit-transition: transform 1s;
+  -moz-transition: transform 1s;
+  -ms-transition: transform 1s;
+  -o-transition: transform 1s;
+}
+
+
+#btnSiguiente{  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 2rem;
+  border: none;
+  border-radius: 1rem;
+  background-color: white;
+  color: rgb(76, 131, 251);
+  cursor: pointer;
+  transition: transform 1s;
+  -webkit-transition: transform 1s;
+  -moz-transition: transform 1s;
+  -ms-transition: transform 1s;
+  -o-transition: transform 1s;
+}
+
+.buttonsPosition{
+  display: flex;
+  flex-direction: row;
+}
+
+.btnSubir{
+  font-size: 2rem;
+  cursor: pointer;
+  height: 3rem;
+  width: 6rem;
+  background-color: white;
+  border: none;
+  color: rgb(76, 131, 251);
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  transition: transform 1s;
+  -webkit-transition: transform 1s;
+  -moz-transition: transform 1s;
+  -ms-transition: transform 1s;
+  -o-transition: transform 1s;
+}
+
+.btnSubir:hover{
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+.btnAnterior:hover{
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+.btnSiguiente:hover{
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+/*ESTILO DE LA PAGINA DONDE SE MUESTRA LA INFORMACION DE LA PELICULA SELECCIONADA*/
+.movie-details{
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: #fff;
+}
+
+.movie-details img{
+  height: 30rem;
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+}
+
+.info-peli{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  width: 75%;
+  padding: 1rem;
+  margin: 00.5rem;
+  font-size: 1.2rem;
+}
+
+.nav-item{
+  font-size: 1.5rem;
+}
+
+
+
+.catalogo-box{
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.catalogo{
+  display: flex;
+  justify-content: center;
+  width: 50rem;
+  height: 40rem;
+}
+
+.catalogo img{
+  width: 0;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: .8;
+  transition: .5s ease;
+}
+
+.catalogo img:hover{
+  cursor: pointer;
+  width: 300px;
+  opacity: 1;
+  filter: contrast(120%);
+}
+
+/*FOOTER*/
+.foot{
+  background-color: rgb(97, 128, 231);
+  justify-content: center;
+  display: flex;
+  color: rgb(221, 221, 221);
+  gap: 2rem;
+  padding: 100px;
+}
+
+/*MEDIA QUERIE PARA QUE CUANDO EL WIDTH ESTE DEL TAMAÑO DE UN DISPOSITIVO MOVIL SE CAMBIE*/
+@media (max-width: 800px){
+  
+  header{
+    background-color: rgb(97, 128, 231);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 100px;
+    height: 3rem;
+  }
+
+  .navbar{
+    width: 100%;
+    gap: 1rem;
+  }
+
+ 
+  .menu-movil{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contenedor-favoriteMovies{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .catalogo{
+    width: 35rem;
+    height: 35rem;
+  }
+}
+
+@media (width <= 550px){
+
+  .navbar{
+    width: 100%;
+    gap: 0;
+  }
+  .searchBar{
+    width: 80%;
+  }
+
+  .catalogo{
+    width: 25rem;
+    height: 25rem;
+  }
+
+  .contenedor-favoriteMovies{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width <= 1024px){
+  .navbar .searchBar{
+    width:min-content;
+  }
+
+  .nav-item{
+    font-size: 1.2rem;
+  }
+
+  .navbar img{
+    height: 170px
+  }
+}
+
+@media (width <= 892px){
+  .navbar{
+    gap: auto;
+  }
+
+
+}
+
+@media (width <= 322px){
+  .contenedor-favoriteMovies{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .poster img{
+    height: 1rem;
+  }
+}
+
+
+/*MEDIA QUERIES DE LA PAGINA DONDE SE MUESTRA LA INFORMACION DE LAS PELICULAS*/
+@media (width <= 551px){
+  .info-peli h1{
+    font-size: 2rem;
+  }
+
+  .info-peli img{
+    height: 20rem;
+  }
+
+  .info-peli p{
+    font-size: 1rem;
+  }
+
+}
+
+@media (width <= 463px){
+
+  .navbar img{
+    width: 30%;
+    height: 100px;
+  }
+  .nav-item{
+    font-size: 14px;
+  }
+  .searchBar{
+    width: 60%;
+  }
+  .info-peli h1{
+    font-size: 1.5rem;
+  }
+
+  .info-peli img{
+    height: 20rem;
+  }
+}
+
+@media (width <= 360px){
+
+  .navbar{
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+  }
+  .navbar img{
+    width: 15%;
+    height: 100px;
+  }
+  .searchBar{
+    width: 40%;
+    margin-top: 5px;
+  }
+  .catalogo{
+    width: 15rem;
+    height: 15rem;
+  }
+  .info-peli h1{
+    font-size: 1.2rem;
+  }
+
+  .info-peli img{
+    height: 20rem;
+  }
+}
+
+@media (width <= 297px){
+  .info-peli h1{
+    font-size: 1rem;
+  }
+
+  .info-peli img{
+    height: 20rem;
+  }
+}
+
+
