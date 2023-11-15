@@ -1,9 +1,15 @@
-* {
-	margin: 0;
+:root{
+  --background-color: linear-gradient(to right bottom,rgb(153, 44, 196),rgb(6, 205, 255));
+  --catalgo-background-color:rgba(255, 255, 255, 0.295);
+  --año-pelicula: rgba(0, 122, 255);
+}
+body{
+  background: var(--background-color);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
 	padding: 0;
 	box-sizing: border-box;
   text-decoration: none;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 /*ESTILOS PARA LA NAVBAR*/
@@ -12,61 +18,30 @@ header{
   top: 0;
   z-index: 1;
 }
-
 .navbar {
   background-color: rgb(97, 128, 231);
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   height: 5rem;
   gap: 5rem;
 }
-
+.navbar img{
+  height: 5rem;
+}
 .navbar ul {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
 }
-
 .navbar li {
   margin: 0 10px;
 }
-
 .navbar a {
   text-decoration: none;
   color: #fff;
 }
-
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: rgb(97, 128, 231);
-  min-width: 160px;
-  z-index: 1;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.dropdown-content a {
-  display: block;
-  padding: 10px;
-  text-decoration: none;
-  color: #fff;
-}
-
-.dropdown-content a:hover {
-  background-color: rgb(51, 51, 133);
-}
-
 .searchBar{
    height: 2.2rem;
    width: 15rem;
@@ -82,11 +57,7 @@ header{
   border: solid 1px #aaa;
   box-shadow: 0px 2px 5px rgb(173, 157, 157);
 }
-
-body {
-	font-family: 'Montserrat', sans-serif;
-  background: linear-gradient(to right bottom,rgb(153, 44, 196),rgb(6, 205, 255));
-}
+/*------------- */
 
 /*ESTILOS PARA LA PELICULA*/
 .populares{
@@ -95,50 +66,66 @@ body {
   text-align: center;
   margin-top: 1rem;
 }
-
 .contenedor-favoriteMovies {
 	width: 90%;
 	max-width: 1000px;
 	margin: 40px auto 100px auto;
-
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	gap: 40px;
 }
-
 .contenedor-favoriteMovies .pelicula {
 	text-align: start;
+  padding: 1rem;
+  background-color: var(--catalgo-background-color);
+  border-radius: 10px;
+  height: 22rem;
 }
-
 .contenedor-favoriteMovies .pelicula .titulo{
 	font-size: 16px;
 	font-weight: 600;
+  margin: 0;
 }
-
+.contenedor-favoriteMovies .pelicula figure{
+  width: 100%;
+  margin: 0;
+  position: relative;
+}
 .contenedor-favoriteMovies .pelicula .poster {
 	width: 100%;
+  height: 12rem;
 	margin-bottom: 10px;
 	border-radius: 15px;
 }
-
-.pelicula{
-  padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.295);
-
+.contenedor-favoriteMovies .pelicula .año-estreno{
+  background-color:var(--año-pelicula);
+  color: white;
+  position: absolute;
+  top: 155px;
+  left: 135px;
+  padding: 3px 8px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
 }
-
-
-.pelicula:hover{
-  transform: scale(0.9);
-  -webkit-transform: scale(0.9);
-  -moz-transform: scale(0.9);
-  -ms-transform: scale(0.9);
-  -o-transform: scale(0.9);
+.contenedor-favoriteMovies .pelicula:hover{
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
 }
-
+.contenedor-favoriteMovies .link{
+  text-decoration: none;
+}
+.titulo-container{
+  height: 40px;
+}
 .titulo{
   color: rgb(255, 255, 255);
+  font-size: 12px;
 }
+/* ----- */
 
 /*ESTILO DE LOS BOTONES*/
 .buttons{
@@ -149,14 +136,12 @@ body {
   height: 4rem;
   position: sticky;
   bottom: 0;
-
 }
-
 #btnAnterior{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 5rem;
+  width: 6rem;
   height: 2rem;
   border: none;
   border-radius: 1rem;
@@ -169,13 +154,11 @@ body {
   -ms-transition: transform 1s;
   -o-transition: transform 1s;
 }
-
-
 #btnSiguiente{  
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 5rem;
+  width: 6rem;
   height: 2rem;
   border: none;
   border-radius: 1rem;
@@ -188,40 +171,11 @@ body {
   -ms-transition: transform 1s;
   -o-transition: transform 1s;
 }
-
 .buttonsPosition{
   display: flex;
   flex-direction: row;
+  gap: 5px;
 }
-
-.btnSubir{
-  font-size: 2rem;
-  cursor: pointer;
-  height: 3rem;
-  width: 6rem;
-  background-color: white;
-  border: none;
-  color: rgb(76, 131, 251);
-  border-radius: 1rem;
-  -webkit-border-radius: 1rem;
-  -moz-border-radius: 1rem;
-  -ms-border-radius: 1rem;
-  -o-border-radius: 1rem;
-  transition: transform 1s;
-  -webkit-transition: transform 1s;
-  -moz-transition: transform 1s;
-  -ms-transition: transform 1s;
-  -o-transition: transform 1s;
-}
-
-.btnSubir:hover{
-  transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  -o-transform: scale(1.1);
-}
-
 .btnAnterior:hover{
   transform: scale(1.1);
   -webkit-transform: scale(1.1);
@@ -229,7 +183,6 @@ body {
   -ms-transform: scale(1.1);
   -o-transform: scale(1.1);
 }
-
 .btnSiguiente:hover{
   transform: scale(1.1);
   -webkit-transform: scale(1.1);
@@ -237,6 +190,7 @@ body {
   -ms-transform: scale(1.1);
   -o-transform: scale(1.1);
 }
+/* ----- */
 
 /*ESTILO DE LA PAGINA DONDE SE MUESTRA LA INFORMACION DE LA PELICULA SELECCIONADA*/
 .movie-details{
@@ -248,7 +202,6 @@ body {
   gap: 1rem;
   color: #fff;
 }
-
 .movie-details img{
   height: 30rem;
   border-radius: 2rem;
@@ -257,7 +210,6 @@ body {
   -ms-border-radius: 2rem;
   -o-border-radius: 2rem;
 }
-
 .info-peli{
   display: flex;
   flex-direction: column;
@@ -268,44 +220,10 @@ body {
   margin: 00.5rem;
   font-size: 1.2rem;
 }
-
 .nav-item{
   font-size: 1.5rem;
 }
-
-
-
-.catalogo-box{
-  display: flex;
-  flex-direction: column;
-  font-size: 2rem;
-  color: white;
-  justify-content: center;
-  align-items: center;
-  margin-top: 5rem;
-}
-
-.catalogo{
-  display: flex;
-  justify-content: center;
-  width: 50rem;
-  height: 40rem;
-}
-
-.catalogo img{
-  width: 0;
-  flex-grow: 1;
-  object-fit: cover;
-  opacity: .8;
-  transition: .5s ease;
-}
-
-.catalogo img:hover{
-  cursor: pointer;
-  width: 300px;
-  opacity: 1;
-  filter: contrast(120%);
-}
+/* ------ */
 
 /*FOOTER*/
 .foot{
@@ -316,6 +234,7 @@ body {
   gap: 2rem;
   padding: 100px;
 }
+/* ---- */ 
 
 /*MEDIA QUERIE PARA QUE CUANDO EL WIDTH ESTE DEL TAMAÑO DE UN DISPOSITIVO MOVIL SE CAMBIE*/
 @media (max-width: 800px){
@@ -477,5 +396,3 @@ body {
     height: 20rem;
   }
 }
-
-
