@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/css/style.css">
+    <link rel="shortcut icon" href="/images/logo.jpeg" type="image/x-icon">
+    <title>Cinepolis</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+          <img src="/images/Cinépolis.svg.png" alt="cineapolis-logo">
+          <ul>
+            <li class="nav-item"><a href="index.html">Inicio</a></li>
+        </ul>
+            <input class="searchBar" type="search" id="busqueda" placeholder="Search movie🔍" autocomplete="off">  
+        </nav>
+    </header>
+
+    <main class="movie-details-container">
+        <div id="movieDetails" class="movie-details"> </div>
+    </main>
+    <section>
+        <div class="video">
+            <video height="720" width="1024" controls> </video>
+        </div>
+    </section>
+    <footer class="foot">
+        <div class="redes-sociales">
+            <a href="#" target="_blank"><img src="/images/facebook-icon.png" alt="Facebook"></a>
+            <a href="#" target="_blank"><img src="/images/twitter-icon.png" alt="Twitter"></a>
+            <a href="#" target="_blank"><img src="/images/instagram-icon.png" alt="Instagram"></a>
+          </div>
+          
+          <div class="logo">
+            <img src="/images/Cinépolis.svg.png" alt="Logo de la Página">
+          </div>
+          
+          <div class="formulario-contacto">
+            <h3>Contacto</h3>
+            <form>
+              <label for="nombre">Nombre:</label>
+              <input type="text" id="nombre" name="nombre" required>
+              
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+              
+              <label for="mensaje">Mensaje:</label>
+              <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+              
+              <button type="submit">Enviar</button>
+            </form>
+          </div>
+    </footer>
+
+    <script src="/src/js/detalle_pelicula.js"></script>
+</body>
+</html>

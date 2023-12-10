@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/css/style.css">
+    <link rel="shortcut icon" href="/images/cinelogo.png" type="image/x-icon">
+    <title>Cinepolis</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <img src="/images/Cinépolis.svg.png" alt="cineapolis-logo">
+      <ul>
+        <li class="nav-item"><a href="#">Inicio</a></li>
+        <li class="nav-item"><a href="#"></a></li>
+    </ul>
+        <input class="searchBar" type="search" id="busqueda" placeholder="Search movie🔍" autocomplete="off">  
+    </nav>
+</header>
+
+    <main class="pagina-inicio">
+     <section class="barra-lateral-izquierdo">
+      <div class="titulo-generos">
+        <h3>Generos</h3>
+      </div>
+      <div class="links-generos">
+        <ul>
+          <li><a href="./accion.html">🎬Accion</a></li>
+          <li><a href="./terror.html">🎬Terror</a></li>
+          <li><a href="#">🎬Romance</a></li>
+          <li><a href="./comedia.html">🎬Comedia</a></li>
+          <li><a href="./cienciaficcion.html">🎬Ciencia Ficcion</a></li>
+        </ul>
+      </div>
+      <div class="contenedor-mejores-reseñas">
+        <h3>Peliculas con mejores reseñas</h3> 
+        <div class="mejores-reseñas" id="mejores-reseñas"> </div> 
+      </div>
+     </section>
+
+     <div class="spinner-container" id="spinner-container">
+      <div class="spinner"></div>
+    </div>
+
+      <section class="populares">
+        <h2>Ultimos Estrenos</h2>
+        <div class="contenedor-favoriteMovies" id="contenedor-favoriteMovies"> </div>
+        <div class="buttons">
+          <div class="buttonsPosition">
+            <button class="btnAnterior" id="btnAnterior">◀ Anterior</button>
+            <button class="btnSiguiente" id="btnSiguiente">Siguiente ▶</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="redes-sociales">
+        <a href="#" target="_blank"><img src="/images/facebook-icon.png" alt="Facebook"></a>
+        <a href="#" target="_blank"><img src="/images/twitter-icon.png" alt="Twitter"></a>
+        <a href="#" target="_blank"><img src="/images/instagram-icon.png" alt="Instagram"></a>
+      </div>
+      
+      <div class="logo">
+        <img src="/images/Cinépolis.svg.png" alt="Logo de la Página">
+      </div>
+      
+      <div class="formulario-contacto">
+        <h3>Contacto</h3>
+        <form>
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required>
+          
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+          
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </footer>
+
+    <script src="/src/js/"></script>
+</body>
+</html>

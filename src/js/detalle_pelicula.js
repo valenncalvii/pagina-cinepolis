@@ -12,12 +12,17 @@ async function CargarDatosPelicula() {
       const respuesta = await response.json();
       //SE LLENA EL ELEMENTO CON LOS DATOS DE LA PELICULA
       detallesEl.innerHTML = `
+      <div class="portada">
+        <img src="https://image.tmdb.org/t/p/w500/${respuesta.backdrop_path}" alt="nombre pelicula">
+      </div>
       <div class="info-peli">
-      <h1>${respuesta.title}</h1>
-       <img src="https://image.tmdb.org/t/p/w500/${respuesta.poster_path}" alt="${respuesta.title}">
-       <p>Descripción: ${respuesta.overview}</p>
-       <p>Fecha de lanzamiento: ${respuesta.release_date}</p>
-       <p>⭐${respuesta.vote_average}</p>
+        <img src="https://image.tmdb.org/t/p/w500/${respuesta.poster_path}" alt="${respuesta.title}">
+        <div class="info-peli-descripcion">
+          <h1>${respuesta.title}</h1>
+          <p> ${respuesta.overview}</p>
+          <p>Fecha de lanzamiento: ${respuesta.release_date}</p>
+          <p>⭐${respuesta.vote_average}</p>
+        </div>
       </div> 
       `;
     }
